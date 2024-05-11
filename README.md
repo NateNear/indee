@@ -34,6 +34,10 @@ npm run build
 npm run lint
 ```
 
+### DEMO:
+
+https://github.com/NateNear/indee/assets/92938055/e5b560c0-780f-43c7-9b93-7b03b1549731
+
 ### accessibility features for disabled users
 
 1. Added aria-label or aria-labelledby attributes to elements that require additional context or labeling.
