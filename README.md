@@ -34,7 +34,6 @@ npm run build
 npm run lint
 ```
 
-
 ### accessibility features for disabled users
 
 1. Added aria-label or aria-labelledby attributes to elements that require additional context or labeling.
