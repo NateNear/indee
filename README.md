@@ -33,6 +33,9 @@ npm run build
 ```sh
 npm run lint
 ```
+### DEPLOYED LINK:
+
+https://indee-three.vercel.app/
 
 ### DEMO:
 
