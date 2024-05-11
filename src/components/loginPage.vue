@@ -59,18 +59,29 @@
           <button
             type="submit"
             class="w-full py-2 rounded-md bg-[#0057FF] text-white font-medium hover:bg-blue-600 transition-colors duration-300 mx-auto"
-            :tabindex="rememberMe ? 0 : -1"
             aria-label="Sign In Button"
           >
             SIGN IN
           </button>
-          <div class="text-white text-start mt-4 text-[12px] flex items-center">
-            <span>Read our Terms of Service</span>
-            <CIcon :icon="cilExternalLink" class="h-3 ml-1" aria-hidden="true" />
-          </div>
         </form>
       </div>
     </header>
+
+    <div
+      v-if="showModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <h2 class="text-lg">Success!</h2>
+        <p>{{ loginSuccessMessage }}</p>
+        <button
+          @click="closeModal"
+          class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Close
+        </button>
+      </div>
+    </div>
 
     <footer class="bg-[#24272C] rounded-b-lg">
       <div class="my-auto bg-[#2D3137] h-7"></div>
@@ -106,6 +117,8 @@ export default {
       email: '',
       password: '',
       rememberMe: false,
+      showModal: false,
+      loginSuccessMessage: 'Login successful! Welcome to MGM Global Distribution.',
       mgmLogo,
       appletvLogo,
       iosLogo,
@@ -116,9 +129,10 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log('Email:', this.email)
-      console.log('Password:', this.password)
-      console.log('Remember Me:', this.rememberMe)
+      this.showModal = true
+    },
+    closeModal() {
+      this.showModal = false
     }
   },
   components: {
