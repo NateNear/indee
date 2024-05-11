@@ -33,3 +33,13 @@ npm run build
 ```sh
 npm run lint
 ```
+
+
+### accessibility features for disabled users
+
+1. Added aria-label or aria-labelledby attributes to elements that require additional context or labeling.
+2. Added alt text to images for screen readers.
+3. Added aria-live attribute to elements that update dynamically.
+4. Ensured proper focus management and keyboard accessibility by adding :tabindex attribute to the submit button.
+5. Added role attributes to clarify the purpose of elements (e.g., role="img" for the background image).
+6. Added aria-hidden="true" to decorative icons to prevent them from being read by screen readers.
